@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $lightGray;
+  font-family: $bodyFont;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 84px 28px;
+
+  @include breakpoint(large) {
+    margin-top: 150px 560px;
+  }
+
+  div {
+    background-color: $white;
+    padding: 16px 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 318px;
+    max-height: 498px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 22px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 400;
+      padding: 0px 37px;
+    }
+  }
+}

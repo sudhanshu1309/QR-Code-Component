@@ -1,0 +1,27 @@
+// Colors
+$white: #ffffff;
+$lightGray: #d6e2f0;
+$grayishBlue: #7b879d;
+$darkBlue: #1f3251;
+
+// Fonts
+$bodyFont: "Outfit", sans-serif;
+
+// Breakpoints
+
+$breakpoints: (
+  small: 499px,
+  large: 999px,
+);
+
+// Mixin
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get(
+    $map: $breakpoints,
+    $key: $size,
+  );
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
